@@ -1,0 +1,65 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+<link rel="stylesheet" id="flash-style-css" href="../static/adminapp/css/style2.css" type="text/css" media="all">
+
+
+<style>
+    h1 {
+    letter-spacing: 0;
+    font-weight: normal;
+    position: relative;
+    padding: 103px 0 10px 57;
+    font-weight: normal;
+    line-height: 120% !important;
+    color: #1f1f1f;
+    margin: 0;
+    font-size: 18px;
+}
+
+</style>
+<h1 class="trail-title">URGENT APPOINTMENT</h1>			
+
+<nav id="flash-breadcrumbs" class="breadcrumb-trail breadcrumbs">
+    <div class="tg-container">
+        <!-- <ul class="trail-items"><li class="trail-item trail-begin"><a class="trail-home" href="http://kvmtrust.in" title="Home"><span>Home</span></a></li><li class="trail-item"><span>URGENT APPOINTMENT</span></li></ul>		</div> -->
+</nav>
+
+
+<div id="content" class="site-content">
+    <div class="tg-container">
+
+
+<div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+
+        
+<article id="post-1293" class="post-1293 page type-page status-publish hentry">
+    {% for x in vacancies %}
+
+
+<div class="entry-content">
+
+    <div id="pl-1293" class="panel-layout"><div id="pg-1293-0" class="panel-grid panel-no-style"><div id="pgc-1293-0-0" class="panel-grid-cell"><div id="panel-1293-0-0-0" class="so-panel widget widget_themegrill_flash_image tg-widget tg-image-widget panel-first-child panel-last-child" data-index="0">
+        	<img src="{{x.pic.url}}">
+
+    </div>
+</div>
+{% endfor %}
+</div></div>	</div><!-- .entry-content -->
+
+
+
+</article><!-- #post-## -->
+
+    </main><!-- #main -->
+</div><!-- #primary -->
+
+
+
+    </div><!-- .tg-container -->
+</div>
+
+
+
+
+{% endblock %}    

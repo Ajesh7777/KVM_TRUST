@@ -1,0 +1,399 @@
+
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+
+
+<section class="py-5">
+    <div class="container">
+
+    <h2><a name="reg">Online Registration</a></h2><br>  
+<div class="col-md-12" style="background-color: #f5f2f2; padding: 20px 20px 30px; border: solid thin cadetblue;"> 
+  <form action="ajax_save_application.php" id="contact_form" name="online_reg" method="post" enctype="multipart/form-data">  
+    <div class="col-md-12 admission_left">
+
+    <h4 style="margin-top: 20px; font-size:1em;">OPTION REGISTRATION</h4>
+     <div class="col-md-12">
+              
+        <div class="input-group input-group1">
+          <label class="col-md-2 control-lable" for="sex" style="float:left; text-align:justify;">Course Applying For :</label>
+          <div class="col-md-2" style="float:left; text-align:justify;">
+            <div class="radios">
+              <select name="applying_course" class="form-control">
+                <option value="MBA">MBA</option>
+                <option value="MCA">MCA</option>
+                <option value="BTECH">B Tech Computer Science &amp; Engineering</option>
+              </select>
+            </div>
+          </div>
+          <!-- <label class="col-md-2 control-lable" for="sex" style="float:left; text-align:justify;">Entrance Exam :</label>
+          <div class="col-md-2" style="float:left; text-align:justify;">
+            <div class="radios">
+              <select name="entrance_exam" class="form-control">
+                <option value="Not Appeared">Not Appeared</option>
+                <option value="Appeared">Appeared</option>
+              </select>
+            </div>
+          </div> -->
+          <label class="col-md-4 control-lable" for="sex" style="float:left; text-align:justify;">Admission Category :</label>
+          <div class="col-md-4" style="float:left; text-align:justify;">
+            <div class="radios">
+              <select name="admission_category" class="form-control">
+                <option value="Merit">Merit</option>
+                <option value="Management">Management</option>
+                <option value="NRI">NRI</option>
+              </select>
+            </div>
+          </div>
+        </div> 
+              <br>
+        <div class="clearfix"> </div>
+      </div> 
+      <div class="col-md-12">
+              
+        <div class="input-group input-group1">
+          
+          <label class="col-md-2 control-lable" for="sex" style="float:left; text-align:justify;">Qualifying Exam passed:</label>
+          <div class="col-md-2" style="float:left; text-align:justify;">
+            <div class="radios">
+              <select name="exam_name" class="form-control">
+                  <option value="BCom">BCom</option>
+	              <option value="BBA">BBA</option>
+	              <option value="BA">BA</option>
+	              <option value="BSc">BSc</option>
+	              <option value="BTech">BTech</option>
+	              <option value="BCA">BCA</option>
+	              <option value="BVoc">BVoc</option>
+	              <option value="Diploma">Diploma</option>
+	              <option value="Plus Two">Plus Two</option>
+	              <option value="Others">Others</option>
+              </select>
+              
+            </div>
+          </div>
+          <label class="col-md-2 control-lable" for="sex" style="float:left; text-align:justify;">If Others(Specify details):</label>
+          <div class="col-md-2" style="float:left; text-align:justify;">
+            <input class="form-control has-dark-background" name="other_exam" placeholder="If Others(Specify details)" type="text">
+          </div>
+          <label class="col-md-2 control-lable" for="sex" style="float:left; text-align:justify;">Percentage of Mark:</label>
+          <div class="col-md-2" style="float:left; text-align:justify;">
+            <input class="form-control has-dark-background" name="percentage1" type="text">
+          </div>
+        </div> 
+              <br>
+        <div class="clearfix"> </div>
+      </div> 
+
+      <div class="col-md-12">
+              
+        <div class="input-group input-group1">
+          
+          <label class="col-md-2 control-lable" for="sex" style="float:left; text-align:justify;">Entrance exam appeared:</label>
+          <div class="col-md-2" style="float:left; text-align:justify;">
+            <div class="radios">
+              <select name="entrance_exam_name" class="form-control">
+                  <option value="KMAT">KMAT</option>
+                  <option value="LBS">LBS</option>
+                  <option value="KEAM">KEAM</option>
+                  <option value="CAT">CAT</option>
+                  <option value="CMAT">CMAT</option>
+                  <option value="Not Appeared">Not Appeared</option>
+                  <option value="Others">Others</option>
+              </select>
+              
+            </div>
+          </div>
+          <label class="col-md-2 control-lable" for="sex" style="float:left; text-align:justify;">If Others(Specify details):</label>
+          <div class="col-md-6" style="float:left; text-align:justify;">
+            <input class="form-control has-dark-background" name="other_entrance_exam" placeholder="If Others(Specify details)" type="text">
+          </div>
+          
+        </div> 
+              <br>
+        <div class="clearfix"> </div>
+      </div> 
+
+      <h2>PERSONAL INFORMATION</h2>      
+      <div class="input-group input-group1">
+        <input class="form-control has-dark-background" name="name" placeholder="Name of the Applicant (Full Name) *" type="text" required="required">
+        <input name="academic_year" type="hidden" value="4">
+      </div>
+
+      <div class="clearfix"> </div>
+
+
+    <div class="form-group col-md-12 form-group1">
+        <label class="col-md-5 control-lable" for="sex" style="float:left; text-align:justify;">Upload Applicant Passportsize Photo (JPG) *: </label>
+        <div class="col-md-7" style="float:left; text-align:justify;">
+          <input class="has-dark-background" name="fileToUpload" type="file" accept="image/jpeg,image/png" required="required">
+        </div>
+        
+        <div class="clearfix"> </div>
+    </div>
+
+
+
+      <div class="form-group col-md-12 form-group1">
+        <label class="col-md-1 control-lable" for="sex" style="float:left; text-align:justify;">Sex : </label>
+        <div class="col-md-4" style="float:left; text-align:justify;">
+          <div class="radios">
+            <label for="radio-01" class="label_radio">
+              <input type="radio" name="gender" checked="checked" value="male"> Male
+            </label>
+            <label for="radio-02" class="label_radio">
+              <input type="radio" name="gender" value="female"> Female
+            </label>
+          </div>
+        </div>
+        <label class="col-md-4 control-lable" for="sex" style="float:left; text-align:justify;">Date Of Birth: </label>
+        <div class="col-md-3" style="float:left; padding-right:0; padding-left:0px;">
+          <input class="form-control has-dark-background" name="dob" placeholder="Date of Birth" type="date">
+        </div>
+        <!-- <div class="col-md-3" style="float:left; padding-right:0; padding-left:0px;">
+          <input class="form-control has-dark-background" name="age" placeholder="Age" type="text">
+        </div> -->
+        
+        <div class="clearfix"> </div>
+      </div>
+
+
+
+      <div class="input-group input-group1">
+        <input class="form-control has-dark-background" name="nationality" placeholder="Nationality" type="text">
+      </div> 
+
+      <div class="form-group col-md-12 form-group1">
+        <label class="col-md-3 control-lable" for="sex" style="float:left; text-align:justify;">Marital Status: </label>
+        <div class="col-md-5" style="float:left; text-align:justify;">
+          <div class="radios">
+            <label for="radio-01" class="label_radio">
+              <input type="radio" name="marital" checked="checked" value="married"> Married
+            </label>
+            <label for="radio-02" class="label_radio">
+              <input type="radio" name="marital" value="single"> Single
+            </label>
+          </div>
+        </div>
+        <div class="col-md-3 select-block1" style="float:left; padding-right:0; padding-left:0px; margin-top: 0px;">
+          <select name="blood_group">
+            <option value="">Blood Group</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>   
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>            
+          </select>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+
+      <div class="form-group col-md-12 form-group1">
+
+        
+      </div>
+
+
+
+      <div class="form-group col-md-12 form-group1">
+        
+        <div class="col-md-4" style="float:left; padding-left:3px; padding-right:0;">
+          <div class="input-group input-group1">
+                <input class="form-control has-dark-background" name="religion" placeholder="Religion " type="text">
+              </div>
+        </div>
+        <div class="col-md-4" style="float:left; padding-left:3px; padding-right:0;">
+           
+                <select name="caste" class="form-control input-group1">
+                  <option value="">Select Caste </option>
+                  <option value="Ambalavasi">Ambalavasi</option>
+                <option value="Brahmin">Brahmin</option>
+                <option value="Chettiar">Chettiar</option>
+                <option value="Dheevara">Dheevara</option>
+                <option value="Ezhava">Ezhava</option>
+                <option value="Ezhuthachan">Ezhuthachan</option>
+                <option value="Gatti">Gatti</option>
+                <option value="Guptan">Guptan</option>
+                <option value="Intercaste">Intercaste</option>
+                <option value="Kavuthiyya/Ezhavathy">Kavuthiyya/Ezhavathy</option>
+                <option value="Krishnavaka">Krishnavaka</option>
+                <option value="Kshatriya">Kshatriya</option>
+                <option value="Kudumbi">Kudumbi</option>
+                <option value="Mapila">Mapila</option>
+                <option value="Mudaliyar">Mudaliyar</option>
+                <option value="Nadar">Nadar</option>
+                <option value="Naidu">Naidu</option>
+                <option value="Nair">Nair</option>
+                <option value="Nambiar">Nambiar</option>
+                <option value="Panicker">Panicker</option>
+                <option value="Rajput">Rajput</option>  
+                <option value="Saliya">Saliya</option>  
+                <option value="SC">SC</option>  
+                <option value="ST">ST</option>  
+                <option value="Thiyya">Thiyya</option>  
+                <option value="Vanika Vyshya">Vanika Vyshya</option>  
+                <option value="Variar">Variar</option>    
+                <option value="Veera Saivam">Veera Saivam</option>    
+                <option value="Velaan">Velaan</option>
+                <option value="Veluthedathu Nair">Veluthedathu Nair</option>
+                <option value="Vilakkithala Nair">Vilakkithala Nair</option>
+                <option value="Vishwakarma">Vishwakarma</option>
+                <option value="Yadav">Yadav</option>
+                <option value="Others">Others</option>
+                <option value="Born Again">Born Again</option>
+                <option value="Bretheren">Bretheren</option>
+                <option value="Church of South India">Church of South India</option>
+                <option value="Evangelist">Evangelist</option>
+                <option value="Jacobite">Jacobite</option>
+                <option value="Knanaya">Knanaya</option>
+                <option value="Knanaya Catholic">Knanaya Catholic</option>
+                <option value="Knanaya Jacobite">Knanaya Jacobite</option>
+                <option value="Latin Catholic">Latin Catholic</option>
+                <option value="Malankara">Malankara</option>
+                <option value="Marthoma">Marthoma</option>
+                <option value="Pentecost">Pentecost</option>
+                <option value="Roman Catholic">Roman Catholic</option>
+                <option value="Seventh-day Adventist">Seventh-day Adventist</option>
+                <option value="Syrian Catholic">Syrian Catholic</option>
+                <option value="Syrian Jacobite">Syrian Jacobite</option>
+                <option value="Syrian Orthodox">Syrian Orthodox</option>
+                <option value="Syro Malabar">Syro Malabar</option>
+                <option value="Others">Others</option>
+                <option value="Not specified">Not specified</option>
+                <option value="Anglo-Indian">Anglo-Indian</option>
+                <option value="Pattarya">Pattarya</option>
+                <option value="Muslim">Muslim</option>
+                <option value="Kusavan">Kusavan</option>
+                <option value="Mukkuva">Mukkuva</option>
+                <option value="Sambava">Sambava</option>
+                <option value="Araya">Araya</option>
+                <option value="Vellala">Vellala</option>
+                <option value="Varma">Varma</option>
+                <option value="G.S.B">G.S.B</option>
+                <option value="Pulayan">Pulayan</option>
+                <option value="Cheramar">Cheramar</option>
+                <option value="Cheruman">Cheruman</option>
+                <option value="Pallan">Pallan</option>
+                <option value="Veerasiva">Veerasiva</option>
+                <option value="Parawan">Parawan</option>
+                <option value="Chakkilian">Chakkilian</option>
+                <option value="Vettuva">Vettuva</option>
+                <option value="Pathiyan">Pathiyan</option>
+                <option value="Harijan">Harijan</option>
+                <option value="Ganaka">Ganaka</option>
+                <option value="Vaniya">Vaniya</option>
+                <option value="Siuc Nadar">Siuc Nadar</option>
+                <option value="Yadava">Yadava</option>
+                <option value="Parayan">Parayan</option>
+                <option value="Panan">Panan</option>
+                <option value="Thandan">Thandan</option>
+                <option value="Kunnuvar Mannady">Kunnuvar Mannady</option>
+                <option value="Cheramar">Cheramar</option>
+                <option value="Malai-Arayan">Malai-Arayan</option>
+                <option value="Nadar">Nadar</option>
+                <option value="Unni">Unni</option>
+                <option value="Ezhavathi">Ezhavathi</option>
+                <option value="Tamil Brahmin">Tamil Brahmin</option>
+                <option value="MANNAN">MANNAN</option>
+                <option value="saiva vellala">saiva vellala</option>
+                <option value="KANAKKAN">KANAKKAN</option>
+                <option value="Yogeeswara">Yogeeswara</option>
+                <option value="Padmasaliya">Padmasaliya</option>
+                <option value="Thelungu Chetti">Thelungu Chetti</option>
+                <option value="Arya Dravida">Arya Dravida</option>
+                <option value="Bharathar">Bharathar</option>
+                <option value="Kakkala">Kakkala</option>
+                <option value="Adi dravida">Adi dravida</option>
+                <option value="Orthodox">Orthodox</option>
+                <option value="Sambava">Sambava</option>
+                <option value="Vannan">Vannan</option>
+                <option value="RCSC">RCSC</option>
+                <option value="Vanika Vaisya">Vanika Vaisya</option>
+        </select>
+        </div>
+        <div class="col-md-4" style="float:left; padding-left:3px; padding-right:0;">
+          <div class="input-group input-group1">
+                <input class="form-control has-dark-background" name="community" placeholder="Community" type="text">
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>     
+      <div class="clearfix"> </div>
+
+
+    <div class="clearfix"> </div>
+    </div>    
+    <div class="col-md-12 admission_right">
+
+
+    <h3>ADDRESS FOR COMMUNICATION:</h3>
+    <div class="col-md-6">
+            
+      <div class="input-group input-group1">
+        <input class="form-control has-dark-background" name="address" placeholder=" Address Line1 *" type="text" required="required">
+      </div>
+      <div class="input-group input-group1">
+        <input class="form-control has-dark-background" name="district" placeholder="District *" type="text" required="required">
+      </div>
+      <div class="input-group input-group1">
+        <input class="form-control has-dark-background" name="pincode" placeholder="PINCODE  *" type="text" required="required">
+      </div>
+      <div class="input-group input-group1">
+        <input class="form-control has-dark-background" name="mobile" placeholder="Mobile *" type="text" required="required">
+      </div>  
+      <div class="input-group input-group1">
+        <input class="form-control has-dark-background" name="fathermobile" placeholder="Mobile 2" type="text">
+      </div>  
+            <br>
+      <div class="clearfix"> </div>
+    </div>    
+    <div class="col-md-6">
+            
+      <div class="input-group input-group1">
+        <input class="form-control has-dark-background" name="address1" placeholder="Address Line 2" type="text">
+      </div>
+      <div class="input-group input-group1">
+        <input class="form-control has-dark-background" name="state" placeholder="State  *" type="text" required="required">
+      </div>
+      <div class="input-group input-group1">
+        <input class="form-control has-dark-background" name="country" placeholder="Country *" type="text" required="required">
+      </div>
+      <div class="input-group input-group1">
+        <input class="form-control has-dark-background" name="email" placeholder="Email" type="text">
+      </div>  
+      <div class="clearfix"> </div>
+    </div>
+    <div class="clearfix"> </div>
+
+
+    <div class="clearfix"> </div>
+    <div class="form-group col-md-12 form-group1">
+        <label class="col-md-5 control-lable" for="sex" style="float:left; text-align:justify;">Upload Signature (JPG/PNG) *: </label>
+        <div class="col-md-7" style="float:left; text-align:justify;">
+          <input class=" has-dark-background" name="fileToUpload2" type="file" accept="image/jpeg,image/png" required="required">
+        </div>
+        
+        <div class="clearfix"> </div>
+    </div>
+    
+
+    
+
+
+    </div>
+
+    <div class="clearfix"> </div>
+    
+    <div class="clearfix"> </div>
+    <input type="hidden" name="academic_year" value="4">
+    <!--<input type="submit" value="Apply Now" name="send" class="course-submit"> -->
+        <button type="submit" name="send" class="course-submit">Apply Now  &nbsp;<i class="fa fa-spinner fa-spin" id="load_img" style="display:none"></i>   </button>                             
+  </form>          
+</div>
+      <br>               
+   
+       </div>
+  </section>
+
+  {% endblock %}    

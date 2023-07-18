@@ -1,0 +1,84 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+
+<link rel="stylesheet" id="flash-style-css" href="../static/adminapp/css/style2.css" type="text/css" media="all">
+
+<!----
+<div class="container" style="height: 2000px;">
+    <-- <div class="column"> --
+    <div class="up-title">1</div>
+     <div class="post-card hover">
+     <div class="post-img">
+          <div class="date">
+         <div class="day">15</div>
+         <div class="month">Aug</div>
+         </div>
+          <img src="../static/adminapp/images/news&events/sna-unit-level-arts-competition.jpg" />
+     </div>
+    <div class="post-content">
+      <div class="category">Photos</div>
+      <h1 class="title"></h1>
+      <h2  class="sub_title" ><a href="{% url 'online_appl' %}">SNA UNIT LEVEL ARTS COMPETITIONS 2018-19</a></h2>
+      <p class="description">Unit level SNA arts competitions were conducted on 12.01.19. Ms. Neenu P A arts club secretary inaugurated the function along […]</p>
+      <-- <div class="post-meta"><span class="timestamp"><i class="fa fa-clock-o"></i> 6 mins ago</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> 39 comments</a></span></div> --
+    </div>
+  </div>  -->
+  
+<style>
+    img {
+    height: 600px;
+    max-width: 100%;
+    vertical-align: middle;
+}
+</style>
+
+
+  <nav id="flash-breadcrumbs" class="breadcrumb-trail breadcrumbs">
+    <div class="tg-container">
+        <h1 class="trail-title">{{data2.title}}</h1>			
+        <ul class="trail-items"><li class="trail-item trail-begin"><a class="trail-home" href="#" title="Home"><span>Home</span></a></li><li class="trail-item"><span>{{data2.title}}</span></li></ul>		</div>
+</nav>
+
+
+<div id="content" class="site-content">
+    <div class="tg-container">
+
+
+<div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+
+        
+<article id="post-866" class="post-866 page type-page status-publish hentry">
+
+
+<div class="entry-content">
+
+    <div id="pl-866" class="panel-layout"><div id="pg-866-0" class="panel-grid panel-no-style"><div id="pgc-866-0-0" class="panel-grid-cell"><div id="panel-866-0-0-0" class="so-panel widget widget_text panel-first-child panel-last-child" data-index="0">			<div class="textwidget"><h2 class="contentheading"> {{data2.title}}</h2>
+
+
+        <p>{{data2.description}}</p>
+<!-- <h2 class="contentheading">Training &amp; Activities</h2>
+<p>The more one is exposed to a situation, the better he/she will be to handle such situations.<br>
+Exposing to probable stress situations will definitely provide a better edge to the professionals-to -be in the college. The smart professionals of today are prepared for all the challenges of tomorrow. This department ensures that students, of any discipline, of the college will undergo “for the job training” prior to placements. And, there are weekly sessions held to tighten the command over English.<br>
+The sessions are made quite interactive to enable the smooth participation of the students through various English games, intellectual activities and by directing them to think big! Besides speaking, writing, listening and reading, the students are guided to analyse a company, to draft a befitting resume and are taken through the appropriate mannerisms, and expected behaviours of a professional. The efforts are to mould a better professional out of the student.<br>
+The trainings are not restricted to the students of the college alone. There are training packages available for the students and professionals outside as well.<br>
+The areas wherein the department concentrates are:<br>
+1. Communicative skills 2. Enhancing creativity 3. Grooming oneself 4. Motivation and positivity 5. ‘For the job’ training to handle the pressure of interviews and group discussions.</p> -->
+<!-- <img src="../static/adminapp/images/news&events/sna-unit-level-arts-competition.jpg" /> -->
+<img src="{{data2.picture.url}}"/>
+<h6>Posted on {{data2.post_date}}</h6>
+
+
+</div>
+    </div></div></div></div>	</div><!-- .entry-content -->
+
+
+
+</article><!-- #post-## -->
+
+    </main><!-- #main -->
+</div><!-- #primary -->
+</div><!-- .tg-container -->
+</div>
+
+  {% endblock %}    

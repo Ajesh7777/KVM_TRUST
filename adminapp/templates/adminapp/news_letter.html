@@ -1,0 +1,146 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+
+
+<style>   
+div{
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+    word-break: break-word;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+p {
+    margin: 0 0 30px;
+    
+}
+
+p{
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+    word-break: break-word;
+}
+p {
+    display: block;
+    margin-block-start: 5em;
+    margin-block-end: 1em;
+    margin-inline-start: 148px;
+    margin-inline-end: 0px;
+    line-height: 1;
+}
+.breadcrumb-trail.breadcrumbs .trail-title {
+    float: left;
+    font-weight: 400;
+    font-size: 25px;
+    padding: 65px 0;
+}
+
+.tg-container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+</style>
+
+    div
+</style>
+<nav id="flash-breadcrumbs" class="breadcrumb-trail breadcrumbs">
+    <div class="tg-container">
+        <h1 class="trail-title">News Letter</h1>			<ul class="trail-items"><li class="trail-item trail-begin"><a class="trail-home" href="http://kvmtrust.in" title="Home"><span>Home</span></a></li><li class="trail-item"><span>News Letter</span></li></ul>		</div>
+</nav>
+
+<div id="content" class="site-content">
+    <div class="tg-container">
+
+
+<div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+
+        
+<article id="post-869" class="post-869 page type-page status-publish hentry">
+
+
+<div class="entry-content">
+    <div id="pl-869" class="panel-layout">
+<div id="pg-869-0" class="panel-grid panel-no-style" data-style="{&quot;background_image_attachment&quot;:false,&quot;background_display&quot;:&quot;tile&quot;,&quot;cell_alignment&quot;:&quot;flex-start&quot;}" data-ratio="1" data-ratio-direction="right">
+<div id="pgc-869-0-0" class="panel-grid-cell" data-weight="1">
+<div id="panel-869-0-0-0" class="so-panel widget widget_text panel-first-child panel-last-child" data-index="0" data-style="{&quot;background_image_attachment&quot;:false,&quot;background_display&quot;:&quot;tile&quot;}">
+<div class="textwidget">
+<h2 class="contentheading"></h2>
+{% for x in newl %}
+
+
+<p><a href="{{x.pdf.url}}" target="_blank">{{x.month_year}}</a></p>
+<!-- <p><a href="../static/adminapp/pdf/news_letter/Insight-December-2018-final-file.pdf">December 2018</a></p> -->
+{% endfor %}
+<!-- <div>
+<div class="dashboard_icon">
+<p><a title="Download News Letter" href="http://kvmtrust.in/wp-content/uploads/2019/11/NewsLetterMar2014.pdf">March 2014</a></p>
+</div>
+<div class="dashboard_icon">
+<p><a title="Download News Letter" href="http://kvmtrust.in/wp-content/uploads/2019/11/NewsLetterOct2013.pdf">October 2013</a></p>
+</div>
+<div class="dashboard_icon">
+<p><a title="Download News Letter" href="http://kvmtrust.in/wp-content/uploads/2019/11/NewsLetterJan2013.pdf">January 2013</a></p>
+</div>
+<div class="dashboard_icon">
+<p><a title="Download News Letter" href="http://kvmtrust.in/wp-content/uploads/2019/11/NewsLetterJan2012.pdf">January 2012</a></p>
+</div>
+<div class="dashboard_icon">
+<p><a title="Download News Letter" href="http://kvmtrust.in/wp-content/uploads/2019/11/NewsLetterSept2011.pdf">September 2011</a></p>
+</div>
+<div class="dashboard_icon">
+<p><a title="Download News Letter" href="http://kvmtrust.in/wp-content/uploads/2019/11/NewsLetterApril2011.pdf">April 2011</a></p>
+</div>
+<div class="dashboard_icon">
+<p><a title="Download News Letter" href="http://kvmtrust.in/wp-content/uploads/2019/11/NewsLetterJan2011.pdf">January 2011</a></p>
+</div>
+<div class="dashboard_icon">
+<p><a title="Download News Letter" href="http://kvmtrust.in/wp-content/uploads/2019/11/NewsLetterOct2010.pdf">October 2010</a></p>
+</div>
+<div class="dashboard_icon">
+<p><a title="Download News Letter" href="http://kvmtrust.in/wp-content/uploads/2019/11/NewsLetterJuly2010.pdf">July 2010</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> -->
+</div><!-- .entry-content -->
+
+
+
+</article><!-- #post-## -->
+
+    </main><!-- #main -->
+</div><!-- #primary -->
+
+
+
+    </div><!-- .tg-container -->
+</div>
+
+{% endblock %}    
+

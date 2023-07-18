@@ -1,0 +1,355 @@
+
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+<h1>registration form</h1>
+<h1>Personal details</h1>
+<form action="{% url 'online_appl' %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
+
+
+ <div class="container">
+
+    <h2><a name="reg">Online Registration</a></h2><br>	
+<div class="col-md-12 tpad" style="background-color: #a75860; padding: 20px 20px 30px;">	
+<form action="" id="online_reg" name="online_reg" method="post" novalidate="novalidate">	
+    <div class="col-md-6 admission_left">
+        <h2>STUDENT PROFILE</h2>
+        <div class="form-group col-md-12 form-group1">
+            
+            <div class="col-md-4" style="float:left; padding-left:3px; padding-right:0;">
+                <div class="input-group input-group1">
+                    <input class="form-control has-dark-background" name="fname" placeholder="First Name *" type="text">
+                </div>
+            </div>
+            <div class="col-md-4" style="float:left; padding-left:3px; padding-right:0;">
+                <div class="input-group input-group1">
+                    <input class="form-control has-dark-background" name="mname" placeholder="Middle Name " type="text">
+                </div>
+            </div>
+            <div class="col-md-4" style="float:left; padding-left:3px; padding-right:0;">
+                <div class="input-group input-group1">
+                    <input class="form-control has-dark-background" name="lname" placeholder="Last Name *" type="text">
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="form-group col-md-12 form-group1">
+            <label class="col-md-1 control-lable" for="sex" style="float:left; text-align:center; color:#fff;">Sex : </label>
+            <div class="col-md-3" style="float:left; text-align:center;">
+                <div class="radios">
+                    <label for="radio-01" class="label_radio" style="color:#fff;">
+                        <input type="radio" name="gender" checked="" value="male"> <i class="fa fa-male" aria-hidden="true" style="font-size:24px;"></i>
+                    </label>
+                    <label for="radio-02" class="label_radio" style="color:#fff;">
+                        <input type="radio" name="gender" value="female"> <i class="fa fa-female" aria-hidden="true" style="font-size:24px;"></i>
+                    </label>
+                </div>
+            </div>
+            <label class="col-md-4 control-lable" for="sex" style="float:left; text-align:center; color:#fff;">Date of Birth : </label>
+            <div class="col-md-4" style="float:left; padding-right:0; padding-left:0px;">
+                <input class="form-control has-dark-background" name="dob" placeholder="Date of Birth" type="date">
+            </div>
+            
+            <div class="clearfix"> </div>
+        </div>
+        <div class="form-group col-md-12 form-group1">
+            
+            <div class="col-md-4" style="float:left; padding-left:3px; padding-right:0;">
+                <div class="input-group input-group1">
+                    <input class="form-control has-dark-background" name="religion" placeholder="Religion " type="text">
+                </div>
+            </div>
+            <div class="col-md-4" style="float:left; padding-left:3px; padding-right:0;">
+                 <div class="select-block1">
+                    <select name="caste">
+                        <option value="">Select Caste </option>
+                        <option value="Ambalavasi">Ambalavasi</option>
+                        <option value="Brahmin">Brahmin</option>
+                        <option value="Chettiar">Chettiar</option>
+                        <option value="Dheevara">Dheevara</option>
+                        <option value="Ezhava">Ezhava</option>
+                        <option value="Ezhuthachan">Ezhuthachan</option>
+                        <option value="Gatti">Gatti</option>
+                        <option value="Guptan">Guptan</option>
+                        <option value="Intercaste">Intercaste</option>
+                        <option value="Kavuthiyya/Ezhavathy">Kavuthiyya/Ezhavathy</option>
+                        <option value="Krishnavaka">Krishnavaka</option>
+                        <option value="Kshatriya">Kshatriya</option>
+                        <option value="Kudumbi">Kudumbi</option>
+                        <option value="Mapila">Mapila</option>
+                        <option value="Mudaliyar">Mudaliyar</option>
+                        <option value="Nadar">Nadar</option>
+                        <option value="Naidu">Naidu</option>
+                        <option value="Nair">Nair</option>
+                        <option value="Nambiar">Nambiar</option>
+                        <option value="Panicker">Panicker</option>
+                        <option value="Rajput">Rajput</option>	
+                        <option value="Saliya">Saliya</option>	
+                        <option value="SC">SC</option>	
+                        <option value="ST">ST</option>	
+                        <option value="Thiyya">Thiyya</option>	
+                        <option value="Vanika Vyshya">Vanika Vyshya</option>	
+                        <option value="Variar">Variar</option>		
+                        <option value="Veera Saivam">Veera Saivam</option>		
+                        <option value="Velaan">Velaan</option>
+                        <option value="Veluthedathu Nair">Veluthedathu Nair</option>
+                        <option value="Vilakkithala Nair">Vilakkithala Nair</option>
+                        <option value="Vishwakarma">Vishwakarma</option>
+                        <option value="Yadav">Yadav</option>
+                        <option value="Others">Others</option>
+                        <option value="Born Again">Born Again</option>
+                        <option value="Bretheren">Bretheren</option>
+                        <option value="Church of South India">Church of South India</option>
+                        <option value="Evangelist">Evangelist</option>
+                        <option value="Jacobite">Jacobite</option>
+                        <option value="Knanaya">Knanaya</option>
+                        <option value="Knanaya Catholic">Knanaya Catholic</option>
+                        <option value="Knanaya Jacobite">Knanaya Jacobite</option>
+                        <option value="Latin Catholic">Latin Catholic</option>
+                        <option value="Malankara">Malankara</option>
+                        <option value="Marthoma">Marthoma</option>
+                        <option value="Pentecost">Pentecost</option>
+                        <option value="Roman Catholic">Roman Catholic</option>
+                        <option value="Seventh-day Adventist">Seventh-day Adventist</option>
+                        <option value="Syrian Catholic">Syrian Catholic</option>
+                        <option value="Syrian Jacobite">Syrian Jacobite</option>
+                        <option value="Syrian Orthodox">Syrian Orthodox</option>
+                        <option value="Syro Malabar">Syro Malabar</option>
+                        <option value="Others">Others</option>
+                        <option value="Not specified">Not specified</option>
+                        <option value="Anglo-Indian">Anglo-Indian</option>
+                        <option value="Pattarya">Pattarya</option>
+                        <option value="Muslim">Muslim</option>
+                        <option value="Kusavan">Kusavan</option>
+                        <option value="Mukkuva">Mukkuva</option>
+                        <option value="Sambava">Sambava</option>
+                        <option value="Araya">Araya</option>
+                        <option value="Vellala">Vellala</option>
+                        <option value="Varma">Varma</option>
+                        <option value="G.S.B">G.S.B</option>
+                        <option value="Pulayan">Pulayan</option>
+                        <option value="Cheramar">Cheramar</option>
+                        <option value="Cheruman">Cheruman</option>
+                        <option value="Pallan">Pallan</option>
+                        <option value="Veerasiva">Veerasiva</option>
+                        <option value="Parawan">Parawan</option>
+                        <option value="Chakkilian">Chakkilian</option>
+                        <option value="Vettuva">Vettuva</option>
+                        <option value="Pathiyan">Pathiyan</option>
+                        <option value="Harijan">Harijan</option>
+                        <option value="Ganaka">Ganaka</option>
+                        <option value="Vaniya">Vaniya</option>
+                        <option value="Siuc Nadar">Siuc Nadar</option>
+                        <option value="Yadava">Yadava</option>
+                        <option value="Parayan">Parayan</option>
+                        <option value="Panan">Panan</option>
+                        <option value="Thandan">Thandan</option>
+                        <option value="Kunnuvar Mannady">Kunnuvar Mannady</option>
+                        <option value="Cheramar">Cheramar</option>
+                        <option value="Malai-Arayan">Malai-Arayan</option>
+                        <option value="Nadar">Nadar</option>
+                        <option value="Unni">Unni</option>
+                        <option value="Ezhavathi">Ezhavathi</option>
+                        <option value="Tamil Brahmin">Tamil Brahmin</option>
+                        <option value="MANNAN">MANNAN</option>
+                        <option value="saiva vellala">saiva vellala</option>
+                        <option value="KANAKKAN">KANAKKAN</option>
+                        <option value="Yogeeswara">Yogeeswara</option>
+                        <option value="Padmasaliya">Padmasaliya</option>
+                        <option value="Thelungu Chetti">Thelungu Chetti</option>
+                        <option value="Arya Dravida">Arya Dravida</option>
+                        <option value="Bharathar">Bharathar</option>
+                        <option value="Kakkala">Kakkala</option>
+                        <option value="Adi dravida">Adi dravida</option>
+                        <option value="Orthodox">Orthodox</option>
+                        <option value="Sambava">Sambava</option>
+                        <option value="Vannan">Vannan</option>
+                        <option value="RCSC">RCSC</option>
+                        <option value="Vanika Vaisya">Vanika Vaisya</option>
+            </select>
+                </div>
+            </div>
+            <div class="col-md-4" style="float:left; padding-left:3px; padding-right:0;">
+                <div class="input-group input-group1">
+                    <input class="form-control has-dark-background" name="nationality" placeholder="Nationality" type="text">
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="form-group col-md-12 form-group1">
+            
+            <div class="col-md-4" style="float:left; padding-left:3px; padding-right:0;">
+                <div class="input-group input-group1">
+                    <input class="form-control has-dark-background" name="age" placeholder="Age " type="number">
+                </div>
+            </div>
+            <div class="col-md-4" style="float:left; padding-left:3px; padding-right:0;">
+                 <div class="select-block1">
+                    <select name="marital_status">
+                        <option value="">Select Marital Status </option>
+                        <option value="Married">Married</option>
+                        <option value="Not Married">Not Married</option>
+            </select>
+                </div>
+            </div>
+            <div class="col-md-4" style="float:left; padding-left:3px; padding-right:0;">
+                <div class="input-group input-group1">
+                    <input class="form-control has-dark-background" name="blood_group" placeholder="Blood Group" type="text">
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="form-group col-md-12 form-group1">
+            <div class="col-md-12" style="float:left; padding-left:3px; padding-right:0;">
+                 <div class="select-block1">
+                    <select name="applied_course">
+                        <option value="">Select Course Applied for </option>
+                        <option value="Msc Nursing">Msc Nursing</option>
+                        <option value="Bsc Nursing">Bsc Nursing</option>
+                        <option value="P B Bsc">P B Bsc</option>
+                        <option value="GNM">GNM</option>
+                        <option value="FHWTC">FHWTC</option>
+                        <option value="D Pharm">D Pharm</option>
+                        <option value="M Pharm">M Pharm</option>
+                        <option value="Pharm D">Pharm D</option>
+                        <option value="B Pharm">B Pharm</option>
+                        <option value="Bsc MLT">Bsc MLT</option>
+                        <option value="Msc MLT">Msc MLT</option>
+                        <option value="DMLT">DMLT</option>
+                        <option value="M Ed - MR">M Ed - MR</option>
+                        <option value="B Ed SE - MR">B Ed SE - MR</option>
+                        <option value="D Ed SE - MR">D Ed SE - MR</option>
+                        <option value="BASLP">BASLP</option>
+                        <option value="DSE - ASD">DSE - ASD</option>
+                        <option value="DECSE - ME">DECSE - ME</option>
+                        <option value="BBA">BBA</option>
+                        <option value="BCom - Finance and Taxation">BCom - Finance and Taxation</option>
+                        <option value="BCom - Computer Application">BCom - Computer Application</option>
+                        
+                        <option value="M.sc bio technology">M.sc bio technology</option>
+                        <option value="MBA">MBA</option>
+                        <option value="Bank coaching">Bank coaching</option>
+                        <option value="Psc coaching">Psc coaching</option>
+                        <option value="Medical and engineering entrance coaching">Medical and engineering entrance coaching</option>
+                        <option value="IELTS coaching">IELTS coaching</option>
+                        <option value="Btech computer science and engineering">Btech computer science and engineering</option>
+                        <option value="Diploma in Medical Lab Technology">Diploma in Medical Lab Technology</option>
+                        <option value="Diploma in Operation Theatre Technology">Diploma in Operation Theatre Technology</option>
+                        <option value="Diploma in Dialysis">Diploma in Dialysis</option>
+                        <option value="Diploma in Electrocardiogram">Diploma in Electrocardiogram</option>
+                        <option value="Diploma in Physiotherapy">Diploma in Physiotherapy</option>
+                        <option value="Diploma in Optometry">Diploma in Optometry</option>
+                        <option value="Diploma in Xray Technician">Diploma in Xray Technician</option>
+                        <option value="Diploma in Medical Record Technology">Diploma in Medical Record Technology</option>
+                        <option value="Diploma in Blood Bank Technology">Diploma in Blood Bank Technology</option>
+                        
+                        
+                    </select>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <h2>EDUCATION PROFILE</h2>
+        <table class="timetable">
+            <thead>
+                <tr>
+                    <th>Qualifying Exam</th>	
+                    <th>Institute / University</th>
+                    <th>Year of Passing</th> 
+                    <th>Mark %</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input name="qualify1" type="text" placeholder="Qualification, Course" class="no-box"></td>
+                    <td><input name="institute1" type="text" placeholder="Institute" class="no-box"></td>
+                    <td><input name="year1" type="text" placeholder="Year" class="no-box"></td>
+                    <td><input name="mark1" type="text" placeholder="%" class="no-box"></td>
+                </tr>
+                <tr>
+                    <td><input name="qualify2" type="text" placeholder="Qualification, Course" class="no-box"></td>
+                    <td><input name="institute2" type="text" placeholder="Institute" class="no-box"></td>
+                    <td><input name="year2" type="text" placeholder="Year" class="no-box"></td>
+                    <td><input name="mark2" type="text" placeholder="%" class="no-box"></td>
+                </tr>
+                <tr>
+                    <td><input name="qualify3" type="text" placeholder="Qualification, Course" class="no-box"></td>
+                    <td><input name="institute3" type="text" placeholder="Institute" class="no-box"></td>
+                    <td><input name="year3" type="text" placeholder="Year" class="no-box"></td>
+                    <td><input name="mark3" type="text" placeholder="%" class="no-box"></td>
+                </tr>
+                <tr>
+                    <td><input name="qualify4" type="text" placeholder="Qualification, Course" class="no-box"></td>
+                    <td><input name="institute4" type="text" placeholder="Institute" class="no-box"></td>
+                    <td><input name="year4" type="text" placeholder="Year" class="no-box"></td>
+                    <td><input name="mark4" type="text" placeholder="%" class="no-box"></td>
+                </tr>
+            </tbody>
+        </table>
+    <br>
+    <div class="clearfix"> </div>
+    </div>		
+    <div class="col-md-6 admission_right">
+    
+    <h3 style="color:#fff;">PARENTS PROFILE:</h3>
+    <div class="col-md-12">
+        <h6 style="color:#fff;">FATHER/MOTHER</h6>			 
+        <div class="input-group input-group1">
+            <input class="form-control has-dark-background" name="fathername" placeholder=" Name " type="text">
+        </div>
+        <div class="input-group input-group1">
+            <input class="form-control has-dark-background" name="fatheroccupation" placeholder="Occupation " type="text">
+        </div>
+        <div class="input-group input-group1">
+            <input class="form-control has-dark-background" name="fatherincome" placeholder="Annual Income " type="text">
+        </div>
+        <div class="input-group input-group1">
+            <input class="form-control has-dark-background" name="fatheraddress" placeholder="Permenent Address " type="text">
+        </div>
+        <div class="input-group input-group1">
+            <input class="form-control has-dark-background" name="fathertel" placeholder="Telephone(With Area Code) " type="text">
+        </div>
+        <div class="input-group input-group1">
+            <input class="form-control has-dark-background" name="fathermobile" placeholder="Mobile *" type="text">
+        </div>	
+        <div class="input-group input-group1">
+            <input class="form-control has-dark-background" name="fatheremail" placeholder="EMail" type="text">
+        </div>
+        <div class="input-group input-group1">
+            <input class="form-control has-dark-background" name="communication_address" placeholder="Communication Address " type="text">
+        </div>
+        <br>
+        <div class="clearfix"> </div>
+        <h3 style="color:#fff;">DECLARATION:</h3>
+        <div class="input-group input-group1">
+            <p style="color:#fff;"><input name="declaration" type="checkbox"> I hereby confirm having read the above informations given by my ward and declare that the same are true and correct.</p>	
+        </div>
+        <br>
+        <div class="clearfix"> </div>
+    </div>		
+    
+    <div class="clearfix"> </div>
+    </div><div class="clearfix"> </div>
+    <input type="hidden" name="academic_year" value="4">
+    <!--<input type="submit" value="Apply Now" name="send" class="course-submit">	-->
+ 
+ 
+   <button type="submit" name="send" class="course-submit">Apply Now  &nbsp;<i class="fa fa-spinner fa-spin" id="load_img" style="display:none"></i>   </button>	                            
+   <br>
+   {{message}}
+   <br>
+  
+
+
+</form>				   
+</div>
+        <br>								
+  
+   </div>
+
+
+
+
+{% endblock %}    
+
+
+
